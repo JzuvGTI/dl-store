@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DL Store - Modern UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<style>
+  #bannerScroll {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  #bannerScroll::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+  }
+
+</style>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white">
+
+  <!-- Header -->
+  <header class="w-full max-w-6xl mx-auto mt-4 px-6 py-4 bg-gray-800/70 backdrop-blur-md shadow-2xl rounded-full flex justify-between items-center sticky top-4 z-50 border-2 border-blue-600/50 transition-all duration-700 ease-in-out animate-fade-in-down ring-1 ring-gray-700/40 drop-shadow-[2px_2px_0px_#000]">
+    <!-- Logo -->
+    <div class="text-2xl font-extrabold tracking-wide text-blue-400 flex items-center gap-2 drop-shadow-md drop-shadow-[2px_2px_0px_#000]">
+      <img src="public/icons.png" alt="Gem Icon" class="w-6 h-6 sm:w-7 sm:h-7" />
+      <span class="hidden sm:inline drop-shadow-[2px_2px_0px_#000]">DL STORE</span>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="flex gap-4 text-sm font-medium drop-shadow-[2px_2px_0px_#000]">
+      <a href="#" class="text-gray-300 hover:text-white transition duration-300 hover:scale-105">Home</a>
+      <a href="#" class="text-gray-300 hover:text-white transition duration-300 hover:scale-105">Prices</a>
+      <a href="#" class="text-gray-300 hover:text-white transition duration-300 hover:scale-105">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Banner Scroll Section -->
+  <div class="mt-12 px-4">
+    <div class="relative max-w-screen-xl mx-auto">
+
+      <!-- Scrollable Container -->
+      <div id="bannerScroll" class="overflow-x-auto scroll-smooth whitespace-nowrap snap-x snap-mandatory flex gap-4 scrollbar-hide rounded-xl">
+        
+        <!-- Banner 1 -->
+      <div class="snap-start min-w-full aspect-[16/9] rounded-xl overflow-hidden shadow-lg drop-shadow-[2px_2px_0px_#000]">
+        <img src="public/banner/banner_1.png" alt="Banner 1" class="w-full h-full object-cover drop-shadow-[2px_2px_0px_#000]" />
+      </div>
+
+      <!-- Banner 2 -->
+      <div class="snap-start min-w-full aspect-[16/9] rounded-xl overflow-hidden shadow-lg drop-shadow-[2px_2px_0px_#000]">
+        <img src="public/banner/banner_2.png" alt="Banner 2" class="w-full h-full object-cover drop-shadow-[2px_2px_0px_#000]" />
+      </div>
+
+      <!-- Scroll Buttons -->
+      <button onclick="scrollBanner(-1)" 
+        class="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-3 rounded-full shadow-lg z-10 hidden sm:flex items-center justify-center transition duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button onclick="scrollBanner(1)" 
+        class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-3 rounded-full shadow-lg z-10 hidden sm:flex items-center justify-center transition duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- Main Content -->
+  <main class="mx-auto px-4 py-10 space-y-4">
+    <div class="mt-6">
+      <div class="w-full space-y-8 px-0 sm:px-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white drop-shadow-md text-center">Harga Diamond Lock</h2>
+        <!-- Diamond Lock -->
+        <div class="relative w-full bg-gray-900 bg-opacity-80 rounded-xl overflow-hidden text-white shadow-xl flex flex-col md:flex-row justify-between items-center p-6 md:p-10 space-y-6 md:space-y-0 drop-shadow-[2px_2px_0px_#000]">
+          <div class="absolute inset-0">
+            <img src="public/pricebg.png" class="w-full h-full object-cover" alt="bg" />
+          </div>
+
+          <!-- Take -->
+          <div class="text-center md:text-left z-10 w-full md:w-1/3 space-y-2">
+            <h3 class="text-xl font-bold drop-shadow-[2px_2px_0px_#000]">Take</h3>
+            <p class="text-2xl font-semibold drop-shadow-[2px_2px_0px_#000]">Rp. 2,100</p>
+            <button
+              class="mt-2 w-24 px-4 py-2 bg-yellow-400 border-[3px] border-yellow-500 rounded-lg text-white text-sm font-semibold drop-shadow-[2px_2px_0px_#000] hover:bg-yellow-500 hover:border-yellow-600 transition-colors duration-200">
+              Jual
+            </button>
+          </div>
+
+          <!-- Image -->
+          <div class="z-10 my-6 md:my-0 w-full md:w-1/3 flex justify-center">
+            <img src="public/DL2 (2).png" alt="Diamond Lock" class="w-28 h-auto drop-shadow-[2px_2px_0px_#000]" />
+          </div>
+
+          <!-- Price -->
+          <div class="text-center md:text-right z-10 w-full md:w-1/3 space-y-2">
+            <h3 class="text-xl font-bold drop-shadow-[2px_2px_0px_#000]">Price</h3>
+            <p class="text-2xl font-semibold drop-shadow-[2px_2px_0px_#000]">Rp. 2,300</p>
+            <button
+              class="w-28 px-4 py-2 bg-[#305b75] border-[4px] border-[#6da2ad] rounded-lg text-white text-sm font-semibold shadow-[2px_2px_0px_#000] hover:bg-[#2a4f67] transition">
+              <span class="drop-shadow-[2px_2px_0px_#000]">Beli</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Blue Gem Lock -->
+        <div class="relative w-full bg-gray-900 bg-opacity-80 rounded-xl overflow-hidden text-white shadow-xl flex flex-col md:flex-row justify-between items-center p-6 md:p-10 space-y-6 md:space-y-0 drop-shadow-[2px_2px_0px_#000]">
+          <div class="absolute inset-0">
+            <img src="public/pricebg.png" class="w-full h-full object-cover" alt="bg" />
+          </div>
+
+          <!-- Info -->
+          <div class="z-10 w-full md:w-2/3 text-center md:text-left space-y-1">
+            <h3 class="text-xl font-bold drop-shadow-[2px_2px_0px_#000]">Blue Gem Lock</h3>
+            <p class="text-sm drop-shadow-[2px_2px_0px_#000]">1 BGL = 100 DL</p>
+            <p class="text-2xl font-extrabold drop-shadow-[2px_2px_0px_#000]">HANYA Rp. 230,000</p>
+            <button
+              class="w-28 px-4 py-2 bg-[#305b75] border-[4px] border-[#6da2ad] rounded-lg text-white text-sm font-semibold shadow-[2px_2px_0px_#000] hover:bg-[#2a4f67] transition">
+              <span class="drop-shadow-[2px_2px_0px_#000]">BELI</span>
+            </button>
+          </div>
+
+          <!-- Image -->
+          <div class="z-10 my-6 md:my-0 w-full md:w-1/3 flex justify-center">
+            <img src="public/BGL2 (2).png" alt="Blue Gem Lock" class="w-28 h-auto drop-shadow-[2px_2px_0px_#000]" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+      <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-6 shadow-lg backdrop-blur-sm ring-1 ring-gray-700/50 flex flex-col items-start drop-shadow-[2px_2px_0px_#000]">
+        <div class="flex items-center mb-4">
+          <img src="public/book.png" alt="Icon Book" class="w-8 h-8 sm:w-10 sm:h-10 mr-3 flex-shrink-0 drop-shadow-[2px_2px_0px_#000]" />
+          <h3 class="text-xl sm:text-2xl font-bold text-white drop-shadow-sm drop-shadow-[2px_2px_0px_#000]">Harga Berubah</h3>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base drop-shadow-[2px_2px_0px_#000]">
+          Harga Diamond Lock dan Blue Gem Lock dapat berubah sewaktu-waktu tergantung pasar. Tekan tombol 
+          <span class="text-yellow-400 font-semibold">TAKE</span> untuk menjual dan 
+          <span class="text-blue-400 font-semibold">BUY</span> untuk membeli.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-6 shadow-lg backdrop-blur-sm ring-1 ring-gray-700/50 flex flex-col items-start drop-shadow-[2px_2px_0px_#000]">
+        <div class="flex items-center mb-4">
+          <img src="public/book.png" alt="Icon Book" class="w-8 h-8 sm:w-10 sm:h-10 mr-3 flex-shrink-0 drop-shadow-[2px_2px_0px_#000]" />
+          <h3 class="text-xl sm:text-2xl font-bold text-white drop-shadow-sm drop-shadow-[2px_2px_0px_#000]">Transaksi Otomatis</h3>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base drop-shadow-[2px_2px_0px_#000]">
+          Semua transaksi dilakukan secara otomatis, tersedia <span class="text-yellow-400 font-semibold">24/7</span>.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-6 shadow-lg backdrop-blur-sm ring-1 ring-gray-700/50 flex flex-col items-start drop-shadow-[2px_2px_0px_#000]">
+        <div class="flex items-center mb-4">
+          <img src="public/book.png" alt="Icon Book" class="w-8 h-8 sm:w-10 sm:h-10 mr-3 flex-shrink-0 drop-shadow-[2px_2px_0px_#000]" />
+          <h3 class="text-xl sm:text-2xl font-bold text-white drop-shadow-sm drop-shadow-[2px_2px_0px_#000]">Pengiriman Cepat</h3>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-sm sm:text-base drop-shadow-[2px_2px_0px_#000]">
+          Pengiriman item dilakukan kurang dari <span class="text-yellow-400 font-semibold">10 menit</span>. Nikmati pengalaman bertransaksi yang cepat, aman, dan terpercaya.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+<script>
+  const container = document.getElementById('bannerScroll');
+  let bannerIndex = 0;
+
+  function scrollBanner(direction) {
+    const scrollAmount = container.offsetWidth;
+    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    bannerIndex += direction;
+  }
+
+  // Auto Scroll setiap 6 detik
+  setInterval(() => {
+    if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: container.offsetWidth, behavior: 'smooth' });
+    }
+  }, 6000);
+</script>
+</html>
